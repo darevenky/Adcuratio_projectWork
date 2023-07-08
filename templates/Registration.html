@@ -1,0 +1,17 @@
+{% extends 'NormalPage.html' %}
+{% block title %}
+    <title>registration</title>
+{% endblock %}
+
+{% block body_block %}
+        <h1>registration Form</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+                {{ufo.as_p}}
+        <input type="submit" value="register">
+        </form>
+<br><br>
+    <h5> Already Have An Registered...? <a href="{% url 'user_login' %}">Log In Here</a></h5>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'NormalPage.html' %}
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body_block %}
+    {% if username %}
+    
+        <h1 style="margin-top: 20%">Welcome Back To Home Page Mr/Ms <span style="color: blue;"> {{username}} </span></h1>
+
+    
+    {% else %}
+        
+        <h1 style="margin-top: 20%">Welcome To Home Page</h1>
+    {% endif %}
+    
+{% endblock %}

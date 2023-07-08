@@ -1,0 +1,29 @@
+{% extends 'NormalPage.html' %}
+{% block title %}
+    <title>user_login</title>
+{% endblock %}
+
+{% block body_block %}
+<br>
+        <h1>Login Here</h1>
+        <br>
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label for="username">username:</label>
+            <input type="text" name="username" id="username"><br>
+
+            <label for="password">password</label>
+            <input type="password" name="password" id="password"><br><br>
+
+            <input type="submit" value="Login" class="btn btn-primary">
+
+        </form>
+<br><br>
+    <h5> Don't Have An Registered...? <a href="{% url 'Registration' %}">Register Here</a></h5>
+
+
+{% endblock %}
+
+   
