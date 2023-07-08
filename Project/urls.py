@@ -29,6 +29,7 @@ urlpatterns = [
     path('user_login/', user_login, name='user_login'),
     path('user_logout/',user_logout,name='user_logout'),
     path('CreateBirds/', CreateBirds.as_view(), name = 'CreateBirds'),
+    path('details/',details,name='details'),
     path('list/',list,name='list'),
     path('',include(DRO.urls)),
 

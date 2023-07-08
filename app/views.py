@@ -115,3 +115,11 @@ class BirdsData(ViewSet):
     def destroy(self,request,pk):
         Birds.objects.get(pk=pk).delete()
         return Response({'Deleted':'Bird is deleted'})
+    
+
+
+@login_required
+def details(request):
+    Bd=Birds.objects.all()
+    d={'bd':Bd}
+    return render(request, 'details.html', d)
